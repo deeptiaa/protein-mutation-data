@@ -1,18 +1,33 @@
 # protein-mutation-data
 
-This dataset has been compiled from the following sources:
+This dataset contains protein information, structural information, experimental conditions, experimental thermodynamic data, and literature references on protein wildtypes and mutants. It is gathered from the following three databases.
 
 ## Sources:
 
-#### **Protherm Database**:
+### **ProTherm Database**:
+The ProTherm Database is the larges Protein thermodynamic database with approximately 31,000 entries. It contains protein wildtype and mutant stability data, structural data, and literature references. The data has been compiled from various other databases (e.g. BRENDA, PubMed), manually curated from literature or directly submitted to the database.
+
+Link to Database: https://web.iitm.ac.in/bioinfo2/prothermdb/index.html
+
+Link to Literature: https://academic.oup.com/nar/article/49/D1/D420/5983626
+
+### **ThermoMut Database**:
+The ThermoMut Database contains approximately 13,000 entries. It contains protein (wildtype and mutant) information, experimental conditions, thermodynamic data, structural environment data, substitution matrices scores, pharmacophore changes data, and literature information. Only protein information, experimental conditions, thermodynamic data, and literature information were included in the Protein Mutation database. The data in the ThermoMut Database derives from the ProTherm Database, manually curated data, and directly submitted experimental data.
+
+Link to Database: http://biosig.unimelb.edu.au/thermomutdb/
+
+Link to Literature: https://academic.oup.com/nar/article/49/D1/D475/5937085?login=true
+
+### **Fireprot Database**:
+
+The FireProt Database contains approximately 17,000 entries of single-point protein mutant stability data, literature information, and sequence and structure annotations. The data was gathered from the ProTherm database, ProtaBank, directly submitted experimental data, and manually curated data. Sequence and structure annotations on data were made using VariBench and Hotspot Wizard.
+
+Link to Database: https://loschmidt.chemi.muni.cz/fireprotdb/
+
+Link to Literature: https://academic.oup.com/nar/article/49/D1/D319/5964070
 
 
-#### **Thermomut Database**:
-
-
-#### **Fireprot Database**:
-
-### Dataset Column Names:
+## Protein Stability Dataset Column Names:
  **DATABASE**: Database from which data was derived from. (e.g. "Protherm")
 
  **PROTEIN**: Protein name for which row pertains to. (e.g. "Lysozyme")
@@ -77,4 +92,15 @@ in folded state equals the concentration of the unfolded protein.(e.g 53.1)
 
 **DATASETS**: Datasets where data derived from. (e.g khan1784)
 
-Other Files/Source Code:
+## Reaction Datasets Column Names:
+
+## Sources:
+
+### **SABIO-RK Database**:
+
+
+Link to Database:
+
+Link to Literature:
+
+## CSV Files/Source Code:
