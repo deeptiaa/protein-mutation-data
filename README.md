@@ -92,15 +92,80 @@ in folded state equals the concentration of the unfolded protein.(e.g 53.1)
 
 **DATASETS**: Datasets where data derived from. (e.g khan1784)
 
-## Reaction Datasets Column Names:
-
 ## Sources:
 
+### **MuteinDB**:
+The Mutein Database contains approximately 500 entries of experimental data about muteins and their biochemical properties (including kinetic data on catalyzed reactions). It is sourced from publicly available sources and directly submitted experimental data.
+
+Link to Database: https://muteindb.genome.tugraz.at/muteindb-web-2.0/faces/init/index.seam
+
+Link to Literature: https://academic.oup.com/database/article/doi/10.1093/database/bas028/436165
+
 ### **SABIO-RK Database**:
+The SABIO-RK Database contains approximately 70,000 data entries on biochemical reactions and their reaction kinetics, and is sourced from manually curated scientific literature.
+
+Link to Database: http://sabio.h-its.org/
+
+Link to Literature: https://academic.oup.com/nar/article/46/D1/D656/4577570
+
+## SABIO_RK Reaction Dataset Column Names:
 
 
-Link to Database:
+**EntryID**: Reaction ID in SABIO-RK database. (e.g. 53)
 
-Link to Literature:
+**Reaction**: Biochemical reaction occurring in experiment. (e.g. e- + H+ = Hydrogen)
 
-## CSV Files/Source Code:
+**Organism**: Organism from which enzyme is derived from. (e.g. gallus gallus)
+
+**ECNumber**: EC Number classification of enzyme used in reaction. (e.g. 3.2.1.17)
+
+**paramter.type**: Type of parameter measurement in reaction. (e.g. concentration)
+
+**parameter.associatedSpecies**: Species that parameter.type is measuring (e.g. Enzyme)
+
+**parameter.startValue**: Initial value of parameter before experiment. (e.g. 0.0)
+
+**parameter.endValue**: Final value of parameter after experiment (e.g. 100.0)
+
+**parameter.standardDeviation**: Standard deviation of parameter measurements (e.g. 0.1)
+
+**parameter.unit**: Unit paramter.type is measured in (e.g. mM)
+
+**UniProtKB_AC**: UniProtKB_AC of enzyme. (e.g. P00698)
+
+**Enzyme Variant**: Enzyme wild-type or mutant name (e.g. wild-type)
+
+**Enzymename**: Name of enzyme. (e.g. dihydrofolate reductase)
+
+**Publication**: Publication information of experiment (e.g van Haaster DJ, Hagedoorn PL, . . .)
+
+**PubMedID**: Publication ID in PubMed Database. (e.g. 15667251.0)
+
+**Substrate**: Substrate in reaction (e.g. Hydrogen)
+
+**Product**: Product in reaction (e.g. e-, H+)
+
+**Temperature**:  Experimental temperature in degree Celsius. (e.g 25.0)
+
+**pH**: Experimental pH. (e.g 7.0)
+
+**Rate Equation**: Equation used to calculate rate value in experiment (e.g. kcat*S/(Km+S))
+
+
+## Files/Source Code Descriptions:
+
+**DBData**:
+ - _ProThermDB_30_JUN_21.tsv_: Raw ProthermDB data.
+ - _all_data_clean.csv_: Cleaned and compiled data from ProthermDB, ThermoMutDB, and FireProtDb; contains 37, 764 rows.
+ - _all_data_raw.csv_: NOT cleaned and compiled data from ProthermDB, ThermoMutDB, and FireProtDb; contains 60, 620 rows.
+ - _fireprotdb_results.csv_: Raw FireProtDB data.
+ - _muteindb.csv_: Raw MuteinDB data.
+  - _muteindb_clean.csv_: Cleaned MuteinDB data with 485 rows.
+ - _thermomutdb.csv_: Raw ThermoMutdb data.
+
+
+ **Adding Enzyme Columm.ipynb**: Jupyter notebook with code to add enzyme column to all_data_clean.csv. NOTE: uniprot-v3 is not included because file is too large
+
+ **Cleaning and Formatting Protein Mutation Data.ipynb**: Jupyter notebook with code to clean and compile Protein Stability Dataset and MuteinDB data.
+
+ **ML Script Generation.ipynb**: Jupyter notebook with script to format a given protein's mutations and parameter into txt file.
