@@ -92,6 +92,8 @@ in folded state equals the concentration of the unfolded protein.(e.g 53.1)
 
 **DATASETS**: Datasets where data derived from. (e.g khan1784)
 
+# Reaction Datasets
+
 ## Sources:
 
 ### **MuteinDB**:
@@ -108,7 +110,7 @@ Link to Database: http://sabio.h-its.org/
 
 Link to Literature: https://academic.oup.com/nar/article/46/D1/D656/4577570
 
-## SABIO_RK Reaction Dataset Column Names:
+## SABIO-RK Reaction Dataset Column Names:
 
 
 **EntryID**: Reaction ID in SABIO-RK database. (e.g. 53)
