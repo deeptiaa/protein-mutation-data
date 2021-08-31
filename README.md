@@ -155,12 +155,14 @@ Link to Literature: https://academic.oup.com/nar/article/46/D1/D656/4577570
 ## Files/Source Code Descriptions:
 
 **DBData**:
+ - _SABIO-RK_: Folder with data downloaded from the SABIO-RK database
  - _ProThermDB_30_JUN_21.tsv_: Raw ProthermDB data.
  - _all_data_clean.csv_: Cleaned and compiled data from ProthermDB, ThermoMutDB, and FireProtDb; contains 37, 764 rows.
  - _all_data_raw.csv_: NOT cleaned and compiled data from ProthermDB, ThermoMutDB, and FireProtDb; contains 60, 620 rows.
  - _fireprotdb_results.csv_: Raw FireProtDB data.
  - _muteindb.csv_: Raw MuteinDB data.
-  - _muteindb_clean.csv_: Cleaned MuteinDB data with 485 rows.
+ - _muteindb_clean.csv_: Cleaned MuteinDB data with 485 rows.
+ - _sabio-rk_raw_: Compiled 2000-2021 data from SABIO-RK database with 179, 773 rows.
  - _thermomutdb.csv_: Raw ThermoMutdb data.
 
 
@@ -169,3 +171,5 @@ Link to Literature: https://academic.oup.com/nar/article/46/D1/D656/4577570
  **Cleaning and Formatting Protein Mutation Data.ipynb**: Jupyter notebook with code to clean and compile Protein Stability Dataset and MuteinDB data.
 
  **ML Script Generation.ipynb**: Jupyter notebook with script to format a given protein's mutations and parameter into txt file.
+
+ **SABIO-RK Notebook**: Jupyter notebook with query to SABIO-RK data and compilation into sabio-rk_raw
